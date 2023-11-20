@@ -22,5 +22,5 @@
 
 
 @section('title')
-    | Movies
+    | Movies List
 @endsection
