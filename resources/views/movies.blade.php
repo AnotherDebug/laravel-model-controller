@@ -10,7 +10,7 @@
             <div class="card mx-3 my-3 m-auto" style="width: 18rem;">
                 <div class="card-body">
                     <h5 class="card-title">{{$movie->title}}</h5>
-                    <a href="#" class="btn btn-primary">Vai</a>
+                    <a href="{{route('details', ["id" => $movie->id])}}" class="btn btn-primary">Vai</a>
                 </div>
             </div>
         @endforeach
