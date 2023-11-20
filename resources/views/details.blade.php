@@ -1,24 +1,20 @@
 @extends('layouts.main')
 
 @section('content')
-    <h1>Movies List</h1>
+    <h1 class="text-center">{{ $movie->title }}</h1>
 
     <div class="container d-flex flex-wrap">
 
-        @foreach ($movies as $movie)
-            {{-- SINGOLA CARD --}}
-            <div class="card mx-3 my-3 m-auto" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">{{$movie->title}}</h5>
-                    <p class="card-text">{{$movie->original_title}}</p>
-                    <p class="card-text">{{$movie->nationality}}</p>
-                    <p class="card-text">{{$movie->date}}</p>
-                    <p class="card-text">{{$movie->vote}}</p>
-                </div>
+
+        {{-- SINGOLA CARD --}}
+        <div class="card m-auto" style="width: 18rem;">
+            <div class="card-body">
+                <p class="card-text"><span class="fw-bold">Titolo originale:</span> {{ $movie->original_title }}</p>
+                <p class="card-text"><span class="fw-bold">Nazionalità:</span> {{ $movie->nationality }}</p>
+                <p class="card-text"><span class="fw-bold">Uscita:</span> {{ $movie->date }}</p>
+                <p class="card-text"><span class="fw-bold">Voto:</span> {{ $movie->vote }}</p>
             </div>
-        @endforeach
-
-
+        </div>
 
     </div>
 @endsection
